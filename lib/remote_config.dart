@@ -1,8 +1,6 @@
 import 'dart:convert';
 
 import 'package:firebase_remote_config/firebase_remote_config.dart';
-import 'package:flutter_fit_utils/model/model.dart';
-import 'package:flutter_fit_utils/model/modelable.dart';
 import 'package:flutter_fit_utils_config/config.dart';
 
 /// Wrapper for a Firebase Remote Config.
@@ -12,37 +10,30 @@ abstract class RemoteConfig extends Config {
   final FirebaseRemoteConfig appConfig = FirebaseRemoteConfig.instance;
 
   @override
-  Future<void> initialize() {
-    // TODO: implement initialize
-    throw UnimplementedError();
+  Future<void> initialize() async {
+    await fetch();
+    read();
+
+    appConfig.onConfigUpdated.listen((event) async {
+        await appConfig.activate();
+        read();
+      },
+      onError: (e) {},
+    );
   }
 
   @override
-  Future<void> fetch() {
-    // TODO: implement fetch
-    throw UnimplementedError();
-  }
-
-  @override
-  void read() {
-    // TODO: implement read
-  }
-
-  @override
-  void write() {
-    // TODO: implement write
-  }
-
-  @override
-  Modelable copyWith({String? id, String? userId}) {
-    // TODO: implement copyWith
-    throw UnimplementedError();
-  }
-
-  @override
-  Model toModel() {
-    // TODO: implement toModel
-    throw UnimplementedError();
+  Future<void> fetch() async {
+    try {
+      await appConfig.fetchAndActivate();
+    }
+    on Exception catch (e) {
+      if (e.toString().contains("request timed out")) {
+        await fetch();
+      }
+      
+      return;
+    }
   }
 
   List<String> readStringList(String key) {
