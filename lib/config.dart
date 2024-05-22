@@ -1,7 +1,5 @@
-import 'package:flutter_fit_utils/model/modelable.dart';
-
 /// Basic configuration module.
-abstract class Config extends Modelable {
+abstract class Config {
   /// Initialize the config instance.
   /// This function should call [fetch] and [read] for the first time.
   Future<void> initialize();

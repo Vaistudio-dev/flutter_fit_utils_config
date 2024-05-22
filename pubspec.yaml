@@ -12,9 +12,6 @@ dependencies:
   firebase_remote_config: ^4.4.5
   flutter:
     sdk: flutter
-  flutter_fit_utils:
-    git:
-      url: https://github.com/s0punk/flutter_fit_utils
 
 dev_dependencies:
   flutter_test:
