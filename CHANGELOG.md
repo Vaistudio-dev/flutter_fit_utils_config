@@ -1,3 +1,4 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+- Added the base Config class
+- Added the RemoteConfig implementation
