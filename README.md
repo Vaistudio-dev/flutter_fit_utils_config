@@ -13,7 +13,7 @@ Use this package to:
 - Go inside your pubspec.yaml file
 - Add this line under the dependencies:
 ```
-    flutter_fit_utils_config: ^1.0.0
+flutter_fit_utils_config: ^1.0.0
 ```
 - Get dependencies
 ```
