@@ -14,7 +14,8 @@ abstract class RemoteConfig extends Config {
     await fetch();
     read();
 
-    appConfig.onConfigUpdated.listen((event) async {
+    appConfig.onConfigUpdated.listen(
+      (event) async {
         await appConfig.activate();
         read();
       },
@@ -26,12 +27,11 @@ abstract class RemoteConfig extends Config {
   Future<void> fetch() async {
     try {
       await appConfig.fetchAndActivate();
-    }
-    on Exception catch (e) {
+    } on Exception catch (e) {
       if (e.toString().contains("request timed out")) {
         await fetch();
       }
-      
+
       return;
     }
   }
