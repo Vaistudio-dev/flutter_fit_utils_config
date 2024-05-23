@@ -9,7 +9,4 @@ abstract class Config {
 
   /// Reads the configuration and assigns the values to the corresponding fields.
   void read();
-
-  /// Overrides the configuration with new values.
-  void write();
 }
