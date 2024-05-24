@@ -2,3 +2,7 @@
 
 - Added the base Config class
 - Added the RemoteConfig implementation
+
+## 1.0.1
+
+- Updated README

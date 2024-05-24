@@ -1,6 +1,6 @@
 A flutter package to easily manage configurations. This package is part of the flutter_fit_utils environement.
 
-![flutter_fit_utils relations](https://github.com/s0punk/flutter_fit_utils/assets/59456672/2747cb84-1c06-4c5a-9b45-8db18977ac77)
+![flutter_fit_utils drawio](https://github.com/s0punk/flutter_fit_utils_provider/assets/59456672/74b056f7-f85d-4635-891c-fd9feee99cfb)
 
 ## Features
 
