@@ -1,6 +1,6 @@
 name: flutter_fit_utils_config
 description: "A flutter package to easily manage configurations. This package is part of the flutter_fit_utils environement."
-version: 1.0.1
+version: 1.0.2
 homepage: https://pub.dev/packages/flutter_fit_utils_config
 repository: https://github.com/s0punk/flutter_fit_utils_config
 issue_tracker: https://github.com/s0punk/flutter_fit_utils_config/issues
@@ -22,13 +22,11 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  firebase_remote_config: ^4.4.5
+  firebase_remote_config: ^5.3.1
   flutter:
     sdk: flutter
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
-
-flutter:
+  flutter_lints: ^5.0.0
