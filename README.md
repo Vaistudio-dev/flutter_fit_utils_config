@@ -1,7 +1,5 @@
 A flutter package to easily manage configurations. This package is part of the flutter_fit_utils environement.
 
-![flutter_fit_utils drawio](https://github.com/s0punk/flutter_fit_utils_provider/assets/59456672/74b056f7-f85d-4635-891c-fd9feee99cfb)
-
 ## Features
 
 Use this package to:
@@ -13,7 +11,7 @@ Use this package to:
 - Go inside your pubspec.yaml file
 - Add this line under the dependencies:
 ```
-flutter_fit_utils_config: ^1.0.0
+flutter_fit_utils_config: ^1.0.2
 ```
 - Get dependencies
 ```
@@ -58,4 +56,4 @@ For the instances that don't call initialize(), make sure to call read() instead
 
 ## Additional information
 
-Feel free to [give any feedback](https://github.com/s0punk/flutter_fit_utils_config/issues) ! This package is also open to contributions.
+Feel free to [give any feedback](https://github.com/Vaistudio-dev/flutter_fit_utils_config/issues) ! This package is also open to contributions.
